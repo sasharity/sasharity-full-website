@@ -1,10 +1,18 @@
-
+/* 
 :root {
   --ink: #171513;
   --beige: #f3eee6;
   --pink: #c83f78;
   --muted: #77716b;
   --white: #fffdf9;
+} */
+
+:root {
+  --ink: #f3eee6;
+  --beige: #171513;
+  --pink: #c83f78;
+  --muted: #b8ada3;
+  --white: #211d1a;
 }
 
 * {
@@ -240,4 +248,73 @@ a {
   .brand-card:hover {
     transform: none;
   }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth image hover effect */
+.brand-card img,
+.catalog-category-card img,
+.product-card img {
+  transition: transform 0.5s ease;
+}
+
+.brand-card:hover img,
+.catalog-category-card:hover img,
+.product-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Subtle card hover effect */
+.brand-card,
+.catalog-category-card,
+.product-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.brand-card:hover,
+.catalog-category-card:hover,
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Smooth button hover effect */
+.cakes-button,
+.product-card-footer a,
+.catalog-contact a {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cakes-button:hover,
+.product-card-footer a:hover,
+.catalog-contact a:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* Portfolio text colour */
+.site {
+  color: #f3eee6;
+}
+
+.site .logo {
+  color: #f3eee6;
 }

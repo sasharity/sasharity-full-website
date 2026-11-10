@@ -4,6 +4,7 @@ import Portfolio from "./Portfolio";
 import "./app.css";
 import CakesPage from "./CakesPage";
 import CatalogCategoryPage from "./CatalogCategoryPage";
+import Sasharitech from "./Sasharitech";
 
 function Home() {
   return (
@@ -96,19 +97,6 @@ function Home() {
 }
 
 
-function Tech() {
-  return (
-    <main className="simple-page">
-      <p className="eyebrow">SASHARITECH</p>
-      <h1>Digital solutions for ambitious ideas.</h1>
-      <p>Web design, website development and custom applications.</p>
-      <Link to="/sasharitech/portfolio">Explore My Portfolio</Link>
-      <br />
-      <br />
-      <Link to="/">Back to Sasharity</Link>
-    </main>
-  );
-}
 
 function Dance() {
   return (
@@ -140,7 +128,7 @@ export default function App() {
         element={<CatalogCategoryPage />}
         />
 
-        <Route path="/sasharitech" element={<Tech />} />
+        <Route path="/sasharitech" element={<Sasharitech />} />
 
         <Route
         path="/sasharitech/portfolio"
